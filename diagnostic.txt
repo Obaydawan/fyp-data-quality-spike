@@ -1,0 +1,96 @@
+ROWS: 621443 | COLUMNS READ: ['site', 'state_territory', 'population_served', 'sample_id', 'sample_collect_date', 'sample_type', 'sample_matrix', 'sample_location', 'major_lab_method', 'pcr_target', 'pcr_gene_target_agg', 'pcr_target_avg_conc', 'pcr_target_units', 'pcr_target_detect', 'pcr_target_avg_conc_lin', 'pcr_target_flowpop_lin', 'date_updated']
+
+== null rate / unique values ==
+site                         dtype=int64      null=  0.0% unique=1957
+state_territory              dtype=str        null=  0.0% unique=53
+population_served            dtype=str        null=  0.0% unique=1489
+sample_id                    dtype=str        null=  0.0% unique=604651
+sample_collect_date          dtype=str        null=  0.0% unique=2383
+sample_type                  dtype=str        null=  0.0% unique=137
+sample_matrix                dtype=str        null=  0.0% unique=6
+sample_location              dtype=str        null=  0.0% unique=2
+major_lab_method             dtype=str        null=  0.0% unique=33
+pcr_target                   dtype=str        null=  0.0% unique=1
+pcr_gene_target_agg          dtype=str        null=  0.0% unique=19
+pcr_target_avg_conc          dtype=str        null=  0.0% unique=435399
+pcr_target_units             dtype=str        null=  0.0% unique=4
+pcr_target_detect            dtype=str        null=  0.0% unique=2
+pcr_target_avg_conc_lin      dtype=str        null=  0.0% unique=422037
+pcr_target_flowpop_lin       dtype=str        null= 19.4% unique=476392
+date_updated                 dtype=str        null=  0.0% unique=1
+
+== value counts for low-cardinality columns ==
+-- sample_matrix
+sample_matrix
+raw wastewater        453733
+post grit removal     126920
+primary sludge         40534
+primary effluent         254
+holding tank               1
+secondary effluent         1
+-- sample_location
+sample_location
+wwtp        598217
+upstream     23226
+-- pcr_target
+pcr_target
+sars-cov-2    621443
+-- pcr_target_units
+pcr_target_units
+copies/l wastewater                              513810
+copies/g dry sludge                              106469
+log10 copies/l wastewater                           963
+log10 copies/l wastewater,copies/l wastewater       201
+-- pcr_target_detect
+pcr_target_detect
+yes    520434
+no     100808
+NaN       201
+-- date_updated
+date_updated
+2026 Oct 02 11:03:00 AM    621443
+
+== numeric columns: quantiles and share <= 0 ==
+-- pcr_target_avg_conc: n=58917  share<=0=0.076
+0.00      0.000000
+0.01      0.000000
+0.25      0.000000
+0.50      0.000000
+0.75      0.000000
+0.99    931.765835
+1.00    999.521810
+-- pcr_target_avg_conc_lin: n=35405  share<=0=0.000
+0.00      0.24900
+0.01     10.00000
+0.25    400.00000
+0.50    400.00000
+0.75    600.00000
+0.99    971.28000
+1.00    999.09459
+-- pcr_target_flowpop_lin: n=103  share<=0=0.000
+0.00    170.224160
+0.01    181.401143
+0.25    462.985335
+0.50    849.027920
+0.75    849.027920
+0.99    966.654828
+1.00    975.792000
+
+sites with linear conc: 985
+rows/site quantiles:
+ 0.50     21.00
+0.75     51.00
+0.90     87.00
+0.99    168.32
+1.00    305.00
+sites with >=150 rows: 25 | >=100: 78
+
+== date_updated minus sample_collect_date (days) ==
+count    621443.000000
+mean        924.895638
+std         534.648830
+min           3.000000
+10%         200.000000
+50%         914.000000
+90%        1620.000000
+max        2453.000000

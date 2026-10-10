@@ -1,0 +1,26 @@
+# Raw source dataset
+export.csv
+
+# Generated CSV data and analysis outputs (review before publishing)
+*.csv
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files and logs
+*.tmp
+*.log
